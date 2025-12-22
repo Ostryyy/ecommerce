@@ -12,3 +12,9 @@
     font-size: 32px;
   }
 }
+
+a {
+  &.active {
+    color: blue;
+  }
+}
