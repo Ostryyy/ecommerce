@@ -1,11 +1,4 @@
 <app-header></app-header>
 <div class="container mt-6">
-  <h1 class="text-2xl font-bold">Welcome to the E-Commerce Platform</h1>
-  <ul>
-    @for (product of products; track product.id) {
-    <li class="border-b py-4">
-      <h2 class="text-xl font-semibold">{{ product.name }}</h2>
-    </li>
-    }
-  </ul>
+  <app-shop></app-shop>
 </div>

@@ -1,27 +1,14 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './layout/header/header';
-import { HttpClient } from '@angular/common/http';
-import { Product } from './shared/models/product';
-import { Pagination } from './shared/models/pagination';
+import { Shop } from "./features/shop/shop";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header],
+  imports: [RouterOutlet, Header, Shop],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  baseUrl = 'https://localhost:5001/api/';
-  private http = inject(HttpClient);
   protected readonly title = signal('client');
-  products: Product[] = [];
-
-  ngOnInit() {
-    this.http.get<Pagination<Product>>(this.baseUrl + 'products').subscribe({
-      next: (response) => (this.products = response.data),
-      error: (error) => console.error('There was an error!', error),
-      complete: () => console.log('Request completed'),
-    });
-  }
 }
