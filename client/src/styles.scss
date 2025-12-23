@@ -1,4 +1,13 @@
 @use '@angular/material' as mat;
+@use "tailwindcss";
+
+.container {
+  @apply mx-auto max-w-screen-2xl px-6;
+}
+
+.text-primary {
+  @apply text-blue-700;
+}
 
 // Customize the entire app. Change :root to your selector if you want to scope the styles.
 :root {
