@@ -13,14 +13,6 @@
   );
 }
 
-.match-input-height {
-  height: var(--mat-form-field-container-height) !important;
-}
-
-.mdc-notched-outline__notch {
-  border-right-style: none !important;
-}
-
 html {
   @include mat.theme(
     (
@@ -59,4 +51,31 @@ body {
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.match-input-height {
+  height: var(--mat-form-field-container-height) !important;
+}
+
+.mdc-notched-outline__notch {
+  border-right-style: none !important;
+}
+
+.snack-error {
+  @include mat.snack-bar-overrides(
+    (
+      container-color: red,
+      supporting-text-color: white,
+      button-color: white,
+    )
+  );
+}
+.snack-success {
+  @include mat.snack-bar-overrides(
+    (
+      container-color: green,
+      supporting-text-color: white,
+      button-color: white,
+    )
+  );
 }
