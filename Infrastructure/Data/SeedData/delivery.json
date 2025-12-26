@@ -1,26 +1,26 @@
 [
   {
-    "ShortName": "UPS1",
-    "Description": "Fastest delivery time",
-    "DeliveryTime": "1-2 Days",
-    "Price": 10
+    "ShortName": "EXPRESS",
+    "Description": "Priority shipping with guaranteed fast delivery",
+    "DeliveryTime": "1 Business Day",
+    "Price": 15
   },
   {
-    "ShortName": "UPS2",
-    "Description": "Get it within 5 days",
-    "DeliveryTime": "2-5 Days",
-    "Price": 5
+    "ShortName": "STANDARD",
+    "Description": "Reliable delivery at a balanced price",
+    "DeliveryTime": "3-4 Business Days",
+    "Price": 7
   },
   {
-    "ShortName": "UPS3",
-    "Description": "Slower but cheap",
-    "DeliveryTime": "5-10 Days",
-    "Price": 2
+    "ShortName": "ECONOMY",
+    "Description": "Budget-friendly option for non-urgent orders",
+    "DeliveryTime": "5-8 Business Days",
+    "Price": 3
   },
   {
-    "ShortName": "FREE",
-    "Description": "Free! You get what you pay for",
-    "DeliveryTime": "1-2 Weeks",
+    "ShortName": "PICKUP",
+    "Description": "Free local pickup from our warehouse",
+    "DeliveryTime": "Same Day",
     "Price": 0
   }
 ]
