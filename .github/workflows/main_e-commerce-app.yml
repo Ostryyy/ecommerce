@@ -26,11 +26,22 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli@20
 
-      - name: Install deps and build angular
+      - name: Install dependencies
         run: |
           cd client
-          npm install
-          ng build
+          npm ci
+
+      - name: Create Environment File
+        run: |
+          echo "export const environment = {" > src/environments/environment.ts
+          echo "  production: true," >> src/environments/environment.ts
+          echo "  apiUrl: 'api/'," >> src/environments/environment.ts
+          echo "  hubUrl: 'hub/notifications/'," >> src/environments/environment.ts
+          echo "  stripePublicKey: '${{ secrets.STRIPE_PUBLIC_KEY }}'," >> src/environments/environment.ts
+          echo "};" >> src/environments/environment.ts
+
+      - name: Build Angular
+        run: ng build
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
