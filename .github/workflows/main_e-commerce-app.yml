@@ -42,7 +42,9 @@ jobs:
           echo "};" >> src/environments/environment.ts
 
       - name: Build Angular
-        run: ng build
+        run: |
+          cd client
+          ng build
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
