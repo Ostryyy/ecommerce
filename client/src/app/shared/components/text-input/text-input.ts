@@ -17,16 +17,13 @@ export class TextInput {
     this.controlDir.valueAccessor = this;
   }
 
-  writeValue(obj: any): void {
-  }
+  writeValue(obj: any): void {}
 
-  registerOnChange(fn: any): void {
-  }
+  registerOnChange(fn: any): void {}
 
-  registerOnTouched(fn: any): void {
-  }
+  registerOnTouched(fn: any): void {}
 
-  get control(){
-    return this.controlDir.control as FormControl
+  get control() {
+    return this.controlDir.control as FormControl;
   }
 }
