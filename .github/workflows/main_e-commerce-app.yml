@@ -33,6 +33,7 @@ jobs:
 
       - name: Create Environment File
         run: |
+          cd client
           echo "export const environment = {" > src/environments/environment.ts
           echo "  production: true," >> src/environments/environment.ts
           echo "  apiUrl: 'api/'," >> src/environments/environment.ts
