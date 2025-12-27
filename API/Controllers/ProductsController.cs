@@ -10,6 +10,7 @@ namespace API.Controllers;
 public class ProductsController(IUnitOfWork unit) : BaseApiController
 {
 
+    [Cache(600)]
     [HttpGet]
     public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery] ProductSpecParams prodSpecParams)
     {
@@ -18,6 +19,7 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
         return await CreatePagedResult(unit.Repository<Product>(), spec, prodSpecParams);
     }
 
+    [Cache(600)]
     [HttpGet("{id:int}")]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
@@ -28,6 +30,7 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
         return product;
     }
 
+    [InvalidateCache("api/products|")]
     [HttpPost]
     public async Task<ActionResult<Product>> CreateProduct(Product product)
     {
@@ -41,6 +44,7 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
         return BadRequest("Problem creating product");
     }
 
+    [InvalidateCache("api/products|")]
     [HttpPut("{id:int}")]
     public async Task<ActionResult> UpdateProduct(int id, Product product)
     {
@@ -55,6 +59,7 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
         return BadRequest("Problem updating the product");
     }
 
+    [InvalidateCache("api/products|")]
     [HttpDelete("{id:int}")]
     public async Task<ActionResult> DeleteProduct(int id)
     {
@@ -72,6 +77,7 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
         return BadRequest("Problem deleting the product");
     }
 
+    [Cache(10000)]
     [HttpGet("brands")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetBrands()
     {
@@ -80,6 +86,7 @@ public class ProductsController(IUnitOfWork unit) : BaseApiController
         return Ok(brands);
     }
 
+    [Cache(10000)]
     [HttpGet("types")]
     public async Task<ActionResult<IReadOnlyList<string>>> GetTypes()
     {
