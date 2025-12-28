@@ -1,0 +1,44 @@
+:root, html {
+  --mat-sys-primary: #E38B2D;
+  --mat-sys-on-primary: #FFFFFF;
+  --mat-sys-primary-container: #FFDDBF;
+  --mat-sys-on-primary-container: #3A1E00;
+  --mat-sys-primary-fixed: #FFDDBF;
+  --mat-sys-primary-fixed-dim: #FFB86B;
+  --mat-sys-on-primary-fixed: #3A1E00;
+  --mat-sys-on-primary-fixed-variant: #7A3D00;
+  --mat-sys-inverse-primary: #FFB86B;
+  --mat-sys-surface-tint: #E38B2D;
+
+  --mat-sys-secondary: #1F3D2B;
+  --mat-sys-on-secondary: #FFFFFF;
+  --mat-sys-secondary-container: #CFE8D7;
+  --mat-sys-on-secondary-container: #0B1F13;
+  --mat-sys-secondary-fixed: #CFE8D7;
+  --mat-sys-secondary-fixed-dim: #9FD3B2;
+  --mat-sys-on-secondary-fixed: #0B1F13;
+  --mat-sys-on-secondary-fixed-variant: #173626;
+
+  --mat-sys-tertiary: #2D6A4F;
+  --mat-sys-on-tertiary: #FFFFFF;
+  --mat-sys-tertiary-container: #D8F3DC;
+  --mat-sys-on-tertiary-container: #081B10;
+
+  --mat-badge-background-color: #E38B2D;
+
+  --mat-sys-surface: #FFFFFF;
+  --mat-sys-on-surface: #1C1B1A;
+
+  --mat-sys-surface-variant: #F3EFE9;
+  --mat-sys-on-surface-variant: #3A3A38;
+
+  --mat-sys-background: #FBFAF7;
+  --mat-sys-on-background: #1C1B1A;
+}
+
+.text-primary { color: #E38B2D !important; }
+
+.mat-mdc-outlined-button.mat-primary,
+.mat-mdc-outlined-button.mat-accent {
+  border-color: #1F3D2B !important;
+}

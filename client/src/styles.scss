@@ -1,12 +1,12 @@
 @use '@angular/material' as mat;
-@use "tailwindcss";
+@use 'tailwindcss';
 
 .container {
   @apply mx-auto max-w-screen-2xl px-6;
 }
 
 .text-primary {
-  @apply text-blue-700;
+  color: var(--mat-sys-primary) !important;
 }
 
 // Customize the entire app. Change :root to your selector if you want to scope the styles.
@@ -19,7 +19,7 @@
   );
   @include mat.badge-overrides(
     (
-      background-color: blue,
+      background-color: var(--mat-sys-primary),
     )
   );
 }
